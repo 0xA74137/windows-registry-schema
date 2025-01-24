@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for Windows Registry",
+  "type": "object",
+  "properties": {
+    "HKCU": {
+      "type": "object",
+      "properties": {
+        "SOFTWARE": {
+          "type": "object",
+          "properties": {
+            "Microsoft": {
+              "type": "object",
+              "properties": {
+                "Windows": {
+                  "type": "object",
+                  "properties": {
+                    "CurrentVersion": {
+                      "type": "object",
+                      "properties": {
+                        "Explorer": {
+                          "type": "object",
+                          "properties": {
+                            "Advanced": {
+                              "type": "object",
+                              "properties": {
+                                "HideFileExt": {
+                                  "description": "This setting controls wether file extensions are shown in explorer",
+                                  "anyOf": [
+                                    { "const": 0, "description": "Show file extensions" },
+                                    { "const": 1, "description": "Hide file extensions" }
+                                  ]
+                                },
+                                "HideIcons": {
+                                  "description": "This setting controls wether desktop icons are shown or not",
+                                  "anyOf": [
+                                    { "const": 0, "description": "Show desktop icons and files" },
+                                    { "const": 1, "description": "Hide desktop icons and files" }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
