@@ -69,6 +69,28 @@
                               ]
                             }
                           }
+                        },
+                        "Themes": {
+                          "type": "object",
+                          "properties": {
+                            "Personalize": {
+                              "type": "object",
+                              "properties": {
+                                "AppsUseLightTheme": {
+                                  "anyOf": [
+                                    { "const": 0, "description": "Use dark theme for apps" },
+                                    { "const": 1, "description": "Use light theme for apps" }
+                                  ]
+                                },
+                                "SystemUsesLightTheme": {
+                                  "anyOf": [
+                                    { "const": 0, "description": "Use dark theme for system" },
+                                    { "const": 1, "description": "Use light theme for system" }
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
