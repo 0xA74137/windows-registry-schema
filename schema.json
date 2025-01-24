@@ -37,8 +37,36 @@
                                     { "const": 0, "description": "Show desktop icons and files" },
                                     { "const": 1, "description": "Hide desktop icons and files" }
                                   ]
+                                },
+                                "ShowSecondsInSystemClock": {
+                                  "description": "This setting controls wether the taskbar clock shows seconds",
+                                  "anyOf": [
+                                    { "const": 0, "description": "Don't show seconds" },
+                                    { "const": 1, "description": "Show seconds" }
+                                  ]
+                                },
+                                "ShowTaskViewButton": {
+                                  "description": "This setting controls wether the task view icon is shown next to the windows button in the taskbar",
+                                  "anyOf": [
+                                    { "const": 0, "description": "Hide task view button" },
+                                    { "const": 1, "description": "Show task view button" }
+                                  ]
                                 }
                               }
+                            }
+                          }
+                        },
+                        "Search": {
+                          "type": "object",
+                          "properties": {
+                            "SearchboxTaskbarMode": {
+                              "description": "This setting controls how the taskbar searchbox is displayed",
+                              "anyOf": [
+                                { "const": 0, "description": "Don't show searchbox" },
+                                { "const": 1, "description": "Show icon only" },
+                                { "const": 2, "description": "Show big searhbox" },
+                                { "const": 3, "description": "Show small searhbox" }
+                              ]
                             }
                           }
                         }
